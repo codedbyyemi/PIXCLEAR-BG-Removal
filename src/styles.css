@@ -198,19 +198,114 @@ img { max-width: 100%; }
 .form-error { margin: -16px 0 -8px; padding: 11px 14px; border-radius: 9px; background: #fff0f0; color: #a63439; font-size: 14px; line-height: 1.45; }
 .button-spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; animation: spin .8s linear infinite; }
 
+
 /* Dashboard */
-.dashboard-page { min-height: 100vh; display: flex; background: #fff; }
-.dashboard-sidebar { position: relative; flex: 0 0 322px; min-height: 100vh; padding: 46px 43px 32px; border-right: 2px solid #e0dde5; display: flex; flex-direction: column; align-items: stretch; background: rgba(255,255,255,.96); }
-.dashboard-sidebar > .brand-logo { margin: 5px 0 76px 38px; font-size: 29px; }
-.dashboard-sidebar .brand-star { width: 27px; height: 27px; right: -22px; top: -11px; }
-.dashboard-nav { display: grid; gap: 48px; }
-.dashboard-nav-item { min-height: 70px; width: 100%; display: flex; align-items: center; gap: 22px; padding: 0 26px; border: 1.5px solid var(--purple); border-radius: 21px; background: #fff; color: #87838e; font-size: 20px; font-weight: 700; letter-spacing: .05em; text-align: left; cursor: pointer; transition: background .18s ease, color .18s ease, transform .18s ease; }
-.dashboard-nav-item:hover { transform: translateX(2px); color: var(--purple); background: #faf8ff; }
-.dashboard-nav-item svg { flex: 0 0 auto; color: var(--purple); }
-.dashboard-nav-item.is-active { background: #eeebf7; color: #17151c; }
-.sidebar-spacer { flex: 1; min-height: 50px; }
-.profile-card { position: relative; min-height: 110px; display: grid; grid-template-columns: 57px 1fr 27px; grid-template-rows: 57px 31px; align-items: center; gap: 7px 12px; padding: 10px 11px; border: 1.5px solid var(--purple); border-radius: 22px; }
-.profile-card > img { width: 57px; height: 57px; grid-row: 1; object-fit: cover; border-radius: 50%; }
+.dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  background: #fff;
+}
+
+.dashboard-sidebar {
+  position: relative;
+  flex: 0 0 322px;
+  min-height: 100vh;
+  padding: 46px 43px 32px;
+  border-right: 2px solid #e0dde5;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: rgba(255,255,255,.96);
+}
+
+.dashboard-sidebar > .brand-logo {
+  margin: 5px 0 76px 38px;
+  font-size: 29px;
+}
+
+.dashboard-sidebar .brand-star {
+  width: 27px;
+  height: 27px;
+  right: -22px;
+  top: -11px;
+}
+
+.dashboard-nav {
+  display: grid;
+  gap: 48px;
+}
+
+.dashboard-nav-item {
+  min-height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 0 26px;
+  border: 1.5px solid var(--purple);
+  border-radius: 21px;
+  background: #fff;
+  color: #87838e;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-align: left;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease, transform .18s ease;
+}
+
+.dashboard-nav-item:hover {
+  transform: translateX(2px);
+  color: var(--purple);
+  background: #faf8ff;
+}
+
+.dashboard-nav-item svg {
+  flex: 0 0 auto;
+  color: var(--purple);
+}
+
+.dashboard-nav-item.is-active {
+  background: #eeebf7;
+  color: #17151c;
+}
+
+.sidebar-spacer {
+  flex: 1;
+  min-height: 50px;
+}
+
+/* Profile card */
+.profile-card {
+  position: relative;
+  min-height: 110px;
+  display: grid;
+  grid-template-columns: 57px 1fr 27px;
+  grid-template-rows: 57px 31px;
+  align-items: center;
+  gap: 7px 12px;
+  padding: 10px 11px;
+  border: 1.5px solid var(--purple);
+  border-radius: 22px;
+}
+
+/* Profile initial avatar */
+.profile-avatar {
+  width: 57px;
+  height: 57px;
+  min-width: 57px;
+  grid-row: 1;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6841e8, #9b72ff);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
 .profile-copy { min-width: 0; display: flex; flex-direction: column; gap: 1px; grid-row: 1; }
 .profile-copy strong { overflow: hidden; color: #15131a; font-size: 16px; text-overflow: ellipsis; white-space: nowrap; }
 .profile-copy span { overflow: hidden; color: #85818c; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }

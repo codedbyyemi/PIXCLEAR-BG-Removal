@@ -20,10 +20,12 @@ function requireAuth() {
 
 export function toAppUser(user, fallbackName = '') {
   if (!user) return null;
+
   return {
     uid: user.uid,
     name: user.displayName || fallbackName || user.email?.split('@')[0] || 'PIXCLEAR user',
     email: user.email || '',
+    photoURL: user.photoURL || '',
   };
 }
 
